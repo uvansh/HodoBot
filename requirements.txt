@@ -1,0 +1,5 @@
+# This will install the latest compatible versions
+openai
+python-dotenv
+requests
+pytz
