@@ -1,5 +1,4 @@
 from langchain_groq import ChatGroq
-from config.prompts import system_prompt,contextual_prompt
 from config.tools_schema import tools
 from dotenv import load_dotenv
 from core.rag_engine import RAGEngine
@@ -9,6 +8,7 @@ from utils.vector_store import create_vectorstore, load_vectorstore
 from langchain_classic.schema import HumanMessage, AIMessage
 import os
 from utils.document_loader import split_documents, load_document_from_directory
+from config.prompts import greet_prompt
 
 load_dotenv()
 
@@ -43,9 +43,28 @@ def main():
     # Stores message objects for RAG context.
     chat_history = []
     
+    print("=" * 60)
+    print(f"🤖 HodoBot: {llm.invoke(
+        greet_prompt
+        ).content}")
+    print("=" * 60)
+    
     while True:
-        question = input("You: ")
+        question = input("\n❓ You: ").strip()
         
+        if question.lower() in ['exit','bye','quit']:
+            print("Hodo: 👋Byee...")
+            break
+        
+        if question.lower() == 'clear':
+            chat_history = []
+            print("Hodo: 🧹 Chat history cleared.")
+            continue
+        
+        if not question:
+            continue
+        
+        # Get the answer from the router.
         result = route_query(
             question=question,
             chat_history=chat_history,
@@ -53,19 +72,22 @@ def main():
             tool_handler=tool_handler
             )
         
-        if question.lower() in ['exit','bye','quit']:
-            print("Hodo: Byee...")
-            break
+        print(f"\n🤖 HodoBot: {result['answer']}")
         
+        # Show Sources
+        if result['sources']:
+            unique_sources = list(set(result['sources']))
+            print(f"\n📚 Sources: {','.join(unique_sources)}")
+            
+        # Update chat history
         chat_history.append(HumanMessage(content=question))
         chat_history.append(AIMessage(content=result['answer']))
 
-        print()
-        
-        print(f"Hodo: {result['answer']}")
-
+        # Keep history manageable
         if len(chat_history)>10:
             chat_history = chat_history[-10:]
+        
+        print("\n" + "-" * 60)
         
 if __name__ =="__main__":
     main()
