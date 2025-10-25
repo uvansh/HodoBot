@@ -1,3 +1,14 @@
+![LangChain](./imgs/langchain-color.png)
+![HuggingFace](./imgs/hugging_face.png)
+![GroqAI](./imgs/groq-dark.png)
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![LangChain](https://img.shields.io/badge/LangChain-Latest-green.svg)
+![HuggingFace](https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-dark.svg)
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+
+
 # 🌍 HoDo Bot ( Your AI Travel Agent )
 
 An intelligent AI travel assistant combining RAG (Retrieval Augmented Generation) 
@@ -12,6 +23,15 @@ and real-time API integration for comprehensive travel planning.
 - 💡 History management 
 - 😵‍💫 Context window management (less to no halluciantions) 
 
+## Accomplished
+- ✅ Multi-document RAG system
+- ✅ Real-time API integrations (weather, currency)
+- ✅ Conversational AI with memory
+- ✅ Function calling / tool use
+- ✅ Smart routing logic
+- ✅ Professional code structure
+- ✅ Complete documentation
+
 ## Tech Stack
 - LangChain for RAG pipeline
 - Groq (Llama 3.3 70b) as LLM
@@ -22,8 +42,16 @@ and real-time API integration for comprehensive travel planning.
 
 ## Installation
 Make sure to make a virtual environment before any installation for isolated workflow.
+
 After that type following command on you terminal or CMD. (Make sure that you are inside project directory)
-Just write pip install -r requirements.txt or pip freeze > requirements.txt
+
+Just write either :
+```
+pip install -r requirements.txt
+# OR
+pip freeze > requirements.txt
+```
+
 Enter your api key by making a .env file or if not using in anywhere sensitive like: cloud, just put it directly into the place where "GROQ_API_KEY" is written.
 
 ## Usage
@@ -31,6 +59,17 @@ Run the code by typing python main.py or using play button on vs code.
 
 Type your questions
 AI will response BOOOMMMM!!!!!!
+
+### Sample Conversation:
+```
+You: Tell me about Thailand
+HodoBot: Thailand is a beautiful Southeast Asian country...
+
+You: What's the weather there now?
+🔧 [Checking real-time weather...]
+HodoBot: Currently in Bangkok: 28°C, Partly cloudy...
+```
+
 
 ## Demo
 In future...
