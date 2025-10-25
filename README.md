@@ -1,4 +1,4 @@
-# 🌍 TravelBot Pro
+# 🌍 HoDo Bot ( Your AI Travel Agent )
 
 An intelligent AI travel assistant combining RAG (Retrieval Augmented Generation) 
 and real-time API integration for comprehensive travel planning.
