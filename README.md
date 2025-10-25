@@ -35,39 +35,37 @@ AI will response BOOOMMMM!!!!!!
 ## Demo
 In future...
 
-```
-
 ---
 
 ## 🧪 Comprehensive Test Scenarios
 
 ### Test 1: Pure RAG
-```
+
 You: What are the visa requirements for Thailand?
 Expected: Answer from documents only
-```
+
 
 ### Test 2: Pure Function Calling
-```
+
 You: What's the weather in Bangkok right now?
 Expected: Real-time API call
-```
+
 
 ### Test 3: Hybrid Query
-```
+
 You: What's the weather in Tokyo and what should I pack?
 Expected: API call + document search, combined answer
-```
+
 
 ### Test 4: Conversational Context
-```
+
 You: Tell me about Thailand
 AI: [answers]
 You: What's the weather there?
 Expected: Understands "there" = Thailand, calls weather API
-```
+
 
 ### Test 5: Multi-step Planning
-```
+
 You: I have 50000 INR. Can I afford 10 days in Thailand?
 Expected: Currency conversion + budget document search + calculation
