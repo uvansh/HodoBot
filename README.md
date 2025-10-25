@@ -1,8 +1,7 @@
-![LangChain](./imgs/langchain-color.png)
-![HuggingFace](./imgs/hugging_face.png)
+![LangChain](https://github.com/langchain-ai/langchain/raw/master/.github/images/logo-light.svg)
+![LangChain](https://img.shields.io/badge/LangChain-Latest-green.svg)
 ![GroqAI](./imgs/groq-dark.png)
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![LangChain](https://img.shields.io/badge/LangChain-Latest-green.svg)
 ![HuggingFace](https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-dark.svg)
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
