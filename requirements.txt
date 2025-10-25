@@ -1,5 +1,13 @@
 # This will install the latest compatible versions
 openai
+groq
 python-dotenv
 requests
 pytz
+langchain
+langchain-community
+langchain-openai
+langchain-groq
+chromadb
+pypdf
+sentence-transformers

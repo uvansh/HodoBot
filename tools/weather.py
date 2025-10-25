@@ -18,5 +18,3 @@ def get_weather(city):
         }
     except:
         return {"error": f"Couldn't get weather for {city}"}
-
-print(get_weather("moscow"))
