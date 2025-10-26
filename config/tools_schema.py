@@ -2,6 +2,8 @@ from tools.weather import get_weather
 from tools.currency import get_currency
 from tools.timezone import get_timezone
 
+available_functions = {"get_weather":get_weather,"get_currency":get_currency,"get_timezone":get_timezone}
+
 tools = [
     {
         "type":"function",
@@ -46,4 +48,4 @@ tools = [
     }
 ]
 
-available_functions = {"get_weather":get_weather,"get_currency":get_currency,"get_timezone":get_timezone}
+print(f"Registered Tools: {list(available_functions.keys())}")

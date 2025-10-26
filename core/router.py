@@ -3,10 +3,14 @@ from langchain_classic.schema import HumanMessage, AIMessage
 def needs_real_time_data(question):
     """Determine if the question requires real time data such as weather or currency exchange rates."""
     
-    keywords =['weather','temperature','forecast','currently',
-               'convert','exchange_rate','currency','now','today','money']
+    keywords =['weather', 'temperature', 'forecast', 'climate',
+        'hot', 'cold', 'rain', 'sunny',
+        'convert', 'exchange', 'currency', 'usd', 'eur']
     
-    return any(word in question.lower() for word in keywords)
+    result = any(word in question.lower() for word in keywords)
+    print(f"🔍 Question: {question}")
+    print(f"🔍 Needs real-time: {result}")
+    return result
 
 # Convert chat history from message objects to dict format for tool handler becuase Raw GROQ API expects dict format.
 # While langchain chains support message objects.

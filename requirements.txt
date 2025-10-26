@@ -11,3 +11,8 @@ langchain-groq
 chromadb
 pypdf
 sentence-transformers
+fastapi
+uvicorn
+python-multipart
+langchain-chroma
+langchain-huggingface
